@@ -62,7 +62,7 @@ public class Deterministic {
 
         for (var p : Security.getProviders()) {
             var name = p.getName();
-            if (name.equals("SunMSCAPI") || name.startsWith("SunPKCS11")) {
+            if (name.equals("SunMSCAPI") || name.startsWith("SunPKCS11") || name.startsWith("OpenJCEPlus")) {
                 System.out.println("Skipped native provider " + name);
                 continue;
             }
